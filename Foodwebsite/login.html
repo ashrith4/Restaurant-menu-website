@@ -1,0 +1,79 @@
+
+<link href="usersignup.css" rel="stylesheet">
+<img src="https://static.toiimg.com/thumb/msid-105826818,imgsize-11444,width-400,resizemode-4/105826818.jpg" width="80" height="50">
+<div class="login-container">
+  
+    <form class="login-form"  method="get">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+  
+
+
+      <p>Don't have an account? <a href="user-signup.html">Sign up</a></p>
+      <p>New seller <a href="seller-signup.html">seller Sign up</a></p>
+  
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+
+
+    let users = [
+        { email: "ashrith@gmail.com", password: "1234" },
+        { email: "sam@gmail.com", password: "fveve" },
+        { email: "ram@gmail.com", password: "vfdetbh" },
+        { email: "man@gmail.com", password: "nfciwnfeo" },
+        { email: "log@gmail.com", password: "nwfiw" },
+        { email: "eee@gmail.com", password: "niewo" },
+        { email: "user@gmail.com", password: "oenvcvn" },
+        { email: "Id@gmail.com", password: "pwkvjfrn" },
+        { email: "be@gmail.com", password: "qjnvim" },
+        { email: "Read@gmail.com", password: "nfewo" },
+    ];
+    
+    let emailPromt=prompt("enter email");
+    let passwordPromt=prompt("enter password");
+
+    function isUserValid(email, password) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].email === email && users[i].password === password) {
+      return true;
+    }
+  }
+  return false; 
+}
+
+
+    function isUserValid(email,password){
+        for(let i=0; i<database.le; i++){
+            if(database[i].email===emailPromt && database[i].password===passwordPromt){
+                return true;
+            }
+            else{
+                alert("Invalid Credentials");
+            }
+        }
+
+    function signIn(email,password){
+        if(isUserValid(email,password)){
+            window.location="Home.html";
+        }
+        else{
+            alert("invalid");
+        }
+    }
+
+    }
+
+    localStorage.setItem('users', JSON.stringify(users));
+
+    let retrievedUsers = JSON.parse(localStorage.getItem('users'));
+    console.log(retrievedUsers);
+
+</script>
